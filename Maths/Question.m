@@ -15,6 +15,9 @@
     self = [super init];
     if (self) {
         
+        _startTime = [NSDate date];
+        NSLog(@"%@", self.startTime);
+        
         int min = 10;
         int max = 100;
         
@@ -31,6 +34,17 @@
     
     }
     return self;
+}
+
+- (NSInteger) answer {
+    _endTime = [NSDate date];
+    return _answer;
+}
+
+- (NSTimeInterval) answerTime {
+    
+    return [_endTime timeIntervalSinceDate:_startTime];
+
 }
 
 @end

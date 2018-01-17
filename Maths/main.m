@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
+#import "Question.h"
 #import "ScoreKeeper.h"
 #import "InputHandler.h"
-
+#import "QuestionManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -21,12 +21,17 @@ int main(int argc, const char * argv[]) {
         printf("Would you like to play? (y/n): ");
         scanf(" %c", &play);
         
+        QuestionManager *manager = [[QuestionManager alloc] init];
+        
+        
         while (play == 'y') {
             
             char inputChar[255];
             fgets(inputChar, 255, stdin);
             
             AdditionQuestion *line = [[AdditionQuestion alloc] init];
+            
+            [manager addQuestion:line];
             
             NSString *result = [NSString stringWithCString: fgets(inputChar, 255, stdin) encoding:NSUTF8StringEncoding];
 
@@ -46,6 +51,8 @@ int main(int argc, const char * argv[]) {
             }
             
             NSLog(@"\nRight:%d  Wrong:%d -- %d%%", score.numberOfRight, score.numberOfWrong, [score scorePercentage]);
+            
+            NSLog(@"%@", manager.timeOutput);
             
             printf("Would you like to play again? (y/n): ");
             scanf(" %c", &play);

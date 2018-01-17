@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		972A6E48200E864600776F81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 972A6E47200E864600776F81 /* main.m */; };
-		972A6E50200EDCD200776F81 /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 972A6E4F200EDCD200776F81 /* AdditionQuestion.m */; };
+		972A6E50200EDCD200776F81 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 972A6E4F200EDCD200776F81 /* Question.m */; };
 		972A6E53200F007E00776F81 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 972A6E52200F007E00776F81 /* InputHandler.m */; };
 		972A6E56200F02E600776F81 /* ScoreKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = 972A6E55200F02E600776F81 /* ScoreKeeper.m */; };
+		97C8C8CB200FBF760082547D /* QuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C8C8CA200FBF760082547D /* QuestionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,12 +29,14 @@
 /* Begin PBXFileReference section */
 		972A6E44200E864600776F81 /* Maths */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Maths; sourceTree = BUILT_PRODUCTS_DIR; };
 		972A6E47200E864600776F81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		972A6E4E200EDCD200776F81 /* AdditionQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditionQuestion.h; sourceTree = "<group>"; };
-		972A6E4F200EDCD200776F81 /* AdditionQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdditionQuestion.m; sourceTree = "<group>"; };
+		972A6E4E200EDCD200776F81 /* Question.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		972A6E4F200EDCD200776F81 /* Question.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		972A6E51200F007E00776F81 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 		972A6E52200F007E00776F81 /* InputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 		972A6E54200F02E600776F81 /* ScoreKeeper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreKeeper.h; sourceTree = "<group>"; };
 		972A6E55200F02E600776F81 /* ScoreKeeper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreKeeper.m; sourceTree = "<group>"; };
+		97C8C8C9200FBF760082547D /* QuestionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionManager.h; sourceTree = "<group>"; };
+		97C8C8CA200FBF760082547D /* QuestionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +74,10 @@
 				972A6E52200F007E00776F81 /* InputHandler.m */,
 				972A6E54200F02E600776F81 /* ScoreKeeper.h */,
 				972A6E55200F02E600776F81 /* ScoreKeeper.m */,
-				972A6E4E200EDCD200776F81 /* AdditionQuestion.h */,
-				972A6E4F200EDCD200776F81 /* AdditionQuestion.m */,
+				972A6E4E200EDCD200776F81 /* Question.h */,
+				972A6E4F200EDCD200776F81 /* Question.m */,
+				97C8C8C9200FBF760082547D /* QuestionManager.h */,
+				97C8C8CA200FBF760082547D /* QuestionManager.m */,
 			);
 			path = Maths;
 			sourceTree = "<group>";
@@ -134,10 +139,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C8C8CB200FBF760082547D /* QuestionManager.m in Sources */,
 				972A6E56200F02E600776F81 /* ScoreKeeper.m in Sources */,
 				972A6E48200E864600776F81 /* main.m in Sources */,
 				972A6E53200F007E00776F81 /* InputHandler.m in Sources */,
-				972A6E50200EDCD200776F81 /* AdditionQuestion.m in Sources */,
+				972A6E50200EDCD200776F81 /* Question.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
