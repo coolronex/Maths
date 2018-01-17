@@ -11,6 +11,8 @@
 #import "ScoreKeeper.h"
 #import "InputHandler.h"
 #import "QuestionManager.h"
+#import "QuestionFactory.h"
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -22,6 +24,7 @@ int main(int argc, const char * argv[]) {
         scanf(" %c", &play);
         
         QuestionManager *manager = [[QuestionManager alloc] init];
+        QuestionFactory *factory = [[QuestionFactory alloc]init];
         
         
         while (play == 'y') {
@@ -29,9 +32,12 @@ int main(int argc, const char * argv[]) {
             char inputChar[255];
             fgets(inputChar, 255, stdin);
             
-            AdditionQuestion *line = [[AdditionQuestion alloc] init];
+            
+            Question *line = [factory generateRandomQuestion];
             
             [manager addQuestion:line];
+            
+            NSLog(@"%@",line.question);
             
             NSString *result = [NSString stringWithCString: fgets(inputChar, 255, stdin) encoding:NSUTF8StringEncoding];
 

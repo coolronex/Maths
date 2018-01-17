@@ -21,7 +21,7 @@
     return self;
 }
 
-- (void) addQuestion: (AdditionQuestion *) newQuestion {
+- (void) addQuestion: (Question *) newQuestion {
     
     [self.questions addObject:newQuestion];
     
@@ -31,7 +31,7 @@
     
     NSTimeInterval totalTime = 0;
     
-    for (AdditionQuestion *question in _questions) {
+    for (Question *question in _questions) {
         
         totalTime += question.answerTime;
         

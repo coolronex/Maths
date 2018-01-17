@@ -13,7 +13,7 @@
 
 @property NSMutableArray *questions;
 
-- (void) addQuestion: (AdditionQuestion *) question;
+- (void) addQuestion: (Question *) question;
 - (NSString *) timeOutput;
 
 @end

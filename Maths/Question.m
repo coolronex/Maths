@@ -6,9 +6,9 @@
 //  Copyright © 2018 Aaron Chong. All rights reserved.
 //
 
-#import "AdditionQuestion.h"
+#import "Question.h"
 
-@implementation AdditionQuestion
+@implementation Question
 
 - (instancetype)init
 {
@@ -16,24 +16,20 @@
     if (self) {
         
         _startTime = [NSDate date];
-        NSLog(@"%@", self.startTime);
         
         int min = 10;
         int max = 100;
         
-        int randomNumber1 = arc4random_uniform(max - min + 1) + min;
-        int randomNumber2 = arc4random_uniform(max - min + 1) + min;
-        int sum = randomNumber1 + randomNumber2;
-    
-        NSString *expression = [NSString stringWithFormat:@"%d + %d = ?", randomNumber1, randomNumber2];
+        _rightValue = arc4random_uniform(max - min + 1) + min;
+        _leftValue = arc4random_uniform(max - min + 1) + min;
         
-        NSLog(@"%@", expression);
-        
-        _question = expression;
-        _answer = sum;
-    
     }
     return self;
+}
+
+- (void)generateQuestion {
+    
+    
 }
 
 - (NSInteger) answer {
