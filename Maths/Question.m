@@ -22,7 +22,7 @@
         
         _rightValue = arc4random_uniform(max - min + 1) + min;
         _leftValue = arc4random_uniform(max - min + 1) + min;
-        
+         
     }
     return self;
 }

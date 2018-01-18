@@ -10,4 +10,6 @@
 
 @interface InputHandler : NSObject
 
++ (NSString *) getUserInput;
+
 @end

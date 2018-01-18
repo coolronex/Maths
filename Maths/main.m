@@ -39,9 +39,7 @@ int main(int argc, const char * argv[]) {
             
             NSLog(@"%@",line.question);
             
-            NSString *result = [NSString stringWithCString: fgets(inputChar, 255, stdin) encoding:NSUTF8StringEncoding];
-
-            NSString *newResult = [result stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            NSString *newResult = [InputHandler getUserInput];
 
             NSInteger number = [newResult intValue];
             
@@ -58,7 +56,7 @@ int main(int argc, const char * argv[]) {
             
             NSLog(@"\nRight:%d  Wrong:%d -- %d%%", score.numberOfRight, score.numberOfWrong, [score scorePercentage]);
             
-            NSLog(@"%@", manager.timeOutput);
+            NSLog(@"%@", [manager timeOutput]);
             
             printf("Would you like to play again? (y/n): ");
             scanf(" %c", &play);
